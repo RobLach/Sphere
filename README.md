@@ -10,3 +10,5 @@ Built in collaboration with a group of developers as senior thesis project withi
 
 
 By: Rob Lach, Alexei Andreev, Kevin Berg, Joseph DiGiovanna, Marc Holden, Michael So, Paul Taraszka
+
+For more screenshots and information you can visit: http://www.roblach.com/#sphere
