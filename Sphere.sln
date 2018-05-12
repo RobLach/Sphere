@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sphere", "Sphere\Sphere.vcproj", "{9442AD5B-41D4-432B-8914-A0A4610C4DF2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2846B11-E640-4367-8235-75EC9B9368FA} = {B2846B11-E640-4367-8235-75EC9B9368FA}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{437B860B-2D01-43AA-80C4-8ACEC4A7C810}"
+	ProjectSection(SolutionItems) = preProject
+		bin\glew32.dll = bin\glew32.dll
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		bin\ogg.dll = bin\ogg.dll
+		bin\openal32.dll = bin\openal32.dll
+		bin\SDL.dll = bin\SDL.dll
+		Sphere.vsmdi = Sphere.vsmdi
+		bin\vorbis.dll = bin\vorbis.dll
+		bin\vorbisenc.dll = bin\vorbisenc.dll
+		bin\vorbisfile.dll = bin\vorbisfile.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{A13F5726-5D09-400A-AFF1-F0B43A99CD0D}"
+	ProjectSection(SolutionItems) = preProject
+		bin\Resources\DefaultFont.tga = bin\Resources\DefaultFont.tga
+		bin\Resources\DefaultFont.txt = bin\Resources\DefaultFont.txt
+		bin\Resources\DefaultMonoFont.tga = bin\Resources\DefaultMonoFont.tga
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meshes", "Meshes", "{307F7867-6D43-4922-879F-4D19C33405A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sphere", "Sphere", "{6AC82AB3-48E7-4155-A400-2E20C4AD6731}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppUnitLite", "CppUnitLite\CppUnitLite.vcproj", "{B2846B11-E640-4367-8235-75EC9B9368FA}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Sphere_Debug|Win32 = Sphere_Debug|Win32
+		Sphere_Release|Win32 = Sphere_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Debug|Win32.Build.0 = Debug|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Release|Win32.ActiveCfg = Release|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Release|Win32.Build.0 = Release|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Sphere_Debug|Win32.ActiveCfg = Debug|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Sphere_Debug|Win32.Build.0 = Debug|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Sphere_Release|Win32.ActiveCfg = Release|Win32
+		{9442AD5B-41D4-432B-8914-A0A4610C4DF2}.Sphere_Release|Win32.Build.0 = Release|Win32
+		{B2846B11-E640-4367-8235-75EC9B9368FA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2846B11-E640-4367-8235-75EC9B9368FA}.Debug|Win32.Build.0 = Debug|Win32
+		{B2846B11-E640-4367-8235-75EC9B9368FA}.Release|Win32.ActiveCfg = Release|Win32
+		{B2846B11-E640-4367-8235-75EC9B9368FA}.Release|Win32.Build.0 = Release|Win32
+		{B2846B11-E640-4367-8235-75EC9B9368FA}.Sphere_Debug|Win32.ActiveCfg = Debug|Win32
+		{B2846B11-E640-4367-8235-75EC9B9368FA}.Sphere_Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A13F5726-5D09-400A-AFF1-F0B43A99CD0D} = {437B860B-2D01-43AA-80C4-8ACEC4A7C810}
+		{307F7867-6D43-4922-879F-4D19C33405A2} = {437B860B-2D01-43AA-80C4-8ACEC4A7C810}
+		{6AC82AB3-48E7-4155-A400-2E20C4AD6731} = {307F7867-6D43-4922-879F-4D19C33405A2}
+	EndGlobalSection
+EndGlobal

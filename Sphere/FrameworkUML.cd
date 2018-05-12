@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Main.cpp&#xD;&#xA;initializes&#xD;&#xA;the following&#xD;&#xA;subsystems:">
+    <Position X="2.01" Y="0.5" Height="1.128" Width="0.95" />
+  </Comment>
+  <Comment CommentText="More shaders go here.">
+    <Position X="6.625" Y="1.25" Height="0.583" Width="1.408" />
+  </Comment>
+  <Comment CommentText="More controllers go here, e.g. AI monster controllers.">
+    <Position X="6.906" Y="2.229" Height="0.583" Width="1.408" />
+  </Comment>
+  <Class Name="SphOpenGL" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oEAEAAEAAAAAIIAAoABAAAQDQAICAEAAAAECAAACAAw=</HashCode>
+      <FileName>SphOpenGL.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphSdl" Collapsed="true">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAAAAAgAAAAAAAAAAAAUAYAAACAAAACCAAAIQQ=</HashCode>
+      <FileName>SphSdl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphFreeCamera" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAIAAIAAAAAAAAAAAAAAASAAgAAA=</HashCode>
+      <FileName>SphFreeCamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphCamera" Collapsed="true">
+    <Position X="3.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAIAAAAAAAQAAAAAAACAAAAAA=</HashCode>
+      <FileName>SphCamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphFollowCamera" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIRQAAAAACEAIAAQAAAAIAAIAAQICgAgAAAACAAgAAE=</HashCode>
+      <FileName>SphFollowCamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphModel" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <AssociationLine Name="m_bones" Type="SphBone">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.68" Y="0.173" Height="0.16" Width="0.868" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="m_actions" Type="SphAction">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.786" Y="0.164" Height="0.16" Width="0.951" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQQgQAAAABQAAAAYAAYAAAQAAAAIQgAABAAEAAFIAI=</HashCode>
+      <FileName>SphModel.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bones" />
+      <Field Name="m_actions" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SphObject" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQACBCEAKCIAChAAAIAAQA0EAABAkwgIBIEgCECBAE=</HashCode>
+      <FileName>SphObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphObjectController" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SphObjectController.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphAction" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQggAAAAAFyAABAMAAAAIAAUAQAIBAAAAAFkAAAAAA=</HashCode>
+      <FileName>SphAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphBone" Collapsed="true">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <Members>
+      <Field Name="m_child" Hidden="true" />
+      <Field Name="m_sibling" Hidden="true" />
+    </Members>
+    <AssociationLine Name="m_mesh" Type="SphMesh">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.598" Y="0.206" Height="0.16" Width="0.764" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgACAEAAAEAAAgAAIIEgAABAAIAAQABAAAAAEQAI=</HashCode>
+      <FileName>SphBone.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_sibling" />
+      <Field Name="m_child" />
+      <Field Name="m_mesh" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SphMaterial" Collapsed="true">
+    <Position X="6.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgQUAAAAAAAIAAAAAAAAABAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>SphMaterial.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphMesh" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <AssociationLine Name="m_materials" Type="SphMaterial">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.081" Y="0.047" Height="0.16" Width="0.92" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IBAAgAAAAAABAAAAAACCAEgAAAAAAABAABDAAAAAEAI=</HashCode>
+      <FileName>SphMesh.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_materials" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SphWorld" Collapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAABAAQACAAAAAAAEAAAAggBAAAAAEARAkAAgACAI=</HashCode>
+      <FileName>SphWorld.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphMusic" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARgAgQEAAAAIAAAEMAAAEAoAAAIIgCAAECAAAAAABI=</HashCode>
+      <FileName>SphMusic.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlslProgram" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAAACAAAACAAEAACAAAAAAAAAAQIAAAAAAYAAI=</HashCode>
+      <FileName>SphGlslProgram.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SdlInput" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAOgAkAoQAAggAMAgAABFCBkAAIAAAAAZAZKYACAAQA=</HashCode>
+      <FileName>SphSdlInput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphScreenShader" Collapsed="true">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="SphShader">
+      <InheritanceModifierLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.609" Y="0.039" Height="0.153" Width="0.521" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAIAAAAAAAAEAACAACAAAAAAAAAkBCAACAAAAAAA=</HashCode>
+      <FileName>SphScreenShader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphShader" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="s_activeShader" Type="SphShader">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.234" Y="0.247" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="m_program" Type="GlslProgram">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.016" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAABgAIAAAAAAAAAAEACAAAAAAAAAAEAARCAAAQAAI=</HashCode>
+      <FileName>SphShader.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="s_activeShader" />
+      <Field Name="m_program" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SphTextRenderer" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgAAAgIACQAAAAACAAAACIAAAAAgCAAJACBBgBABg=</HashCode>
+      <FileName>SphTextRenderer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphGui" Collapsed="true">
+    <Position X="3" Y="3" Width="1.5" />
+    <AssociationLine Name="m_objects" Type="SphGuiObjectList">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.006" Y="0.06" Height="0.16" Width="0.899" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQAAAAAAAAAAAAAAAAAAgABACAAAAA4A=</HashCode>
+      <FileName>SphGui.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_objects" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SphGuiObject" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAgAAAgAARFAAAAABAAAAAAAAI=</HashCode>
+      <FileName>SphGuiObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphGuiImage" Collapsed="true">
+    <Position X="1.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAAAAAAAAAAAAAAAAAAAAAAAACABAAAAAAAAA=</HashCode>
+      <FileName>SphGuiImage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphGuiText" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAgAAAAIAAAAAQAAAAAAAABAAAAAAAgA=</HashCode>
+      <FileName>SphGuiText.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphGuiTextbox" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAAABAAAABAAAAAAAAAAAAAAAhAAAAAAAAI=</HashCode>
+      <FileName>SphGuiTextbox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphGame" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <AssociationLine Name="m_camera" Type="SphCamera">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.711" Y="0.141" Height="0.16" Width="0.858" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAADIIAAJAAAAgAEAAAAQAAAJAKQAAAAQA=</HashCode>
+      <FileName>SphGame.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_camera" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SphBound" Collapsed="true">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAgABCAAAAAAgA=</HashCode>
+      <FileName>SphBound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphPointBound" Collapsed="true">
+    <Position X="13" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAQgA=</HashCode>
+      <FileName>SphPointBound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphSphericBound" Collapsed="true">
+    <Position X="11.5" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="SphPointBound" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.438" Y="2.25" />
+        <Point X="13.438" Y="1.875" />
+        <Point X="12.25" Y="1.875" />
+        <Point X="12.25" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>SphSphericBound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SphTightBound" Collapsed="true">
+    <Position X="14.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAFABQAAAEAQAAAQAAAAEAAAAARAABBAACAAAgA=</HashCode>
+      <FileName>SphTightBound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SphCollisionInfo" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAgAAAAEAAAAAE=</HashCode>
+      <FileName>SphCollisionDetection.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="SphObjectList" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SphWorld.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SphGuiObjectList" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SphGui.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SphCollisionsList" Collapsed="true">
+    <Position X="13" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SphCollisionDetection.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

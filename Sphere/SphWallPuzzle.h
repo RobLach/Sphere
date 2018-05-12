@@ -1,0 +1,286 @@
+void AddMazePuzzle(SphDesertWorld* world, float x, float y, float z){
+	SphProp* prop;
+	// Props for the Red-Key Maze
+	float mazePos[N_XYZ], rot[N_QUAT];
+	Set(mazePos, x, y, z);
+
+	#define SET_POSITION(x_,y_,z_)		\
+		prop->SetPosition(x_ + x, y_ + y, z_ + z);
+
+	//Top Border
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(50.0f, 2.5f, 68.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(50.0f, 2.5f, 62.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(50.0f, 2.5f, 56.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(50.0f, 2.5f, 50.0f);
+	world->AddCollidable(prop);
+
+	//Bottom Border
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(82.0f, 2.5f, 74.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(82.0f, 2.5f, 68.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(82.0f, 2.5f, 62.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(82.0f, 2.5f, 56.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(82.0f, 2.5f, 50.0f);
+	world->AddCollidable(prop);
+
+	// Horizontal Walls
+
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(75.0f, 2.5f, 74.0f);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(75.0f, 2.5f, 68.0f);
+	//world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(75.0f, 2.5f, 62.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(75.0f, 2.5f, 56.0f);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(75.0f, 2.5f, 50.0f);
+	//world->AddCollidable(prop);
+
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(69.0f, 2.5f, 74.0f);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(69.0f, 2.5f, 68.0f);
+	//world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(69.0f, 2.5f, 62.0f);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(69.0f, 2.5f, 56.0f);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(69.0f, 2.5f, 50.0f);
+	//world->AddCollidable(prop);
+
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(63.0f, 2.5f, 74.0f);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(63.0f, 2.5f, 68.0f);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(63.0f, 2.5f, 62.0f);
+	//world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(63.0f, 2.5f, 56.0f);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(63.0f, 2.5f, 50.0f);
+	//world->AddCollidable(prop);
+
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(57.0f, 2.5f, 74.0f);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(57.0f, 2.5f, 68.0f);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(57.0f, 2.5f, 62.0f);
+	//world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(57.0f, 2.5f, 56.0f);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(57.0f, 2.5f, 50.0f);
+	//world->AddCollidable(prop);
+
+	// Left Border
+	prop = g_puzzles.CreateNewProp("wall45");
+	SET_POSITION(50.0f, 2.5f, 78.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(54.0f, 2.5f, 78.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(60.0f, 2.5f, 78.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(66.0f, 2.5f, 78.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(72.0f, 2.5f, 78.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(78.0f, 2.5f, 78.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall45");
+	SET_POSITION(82.0f, 2.5f, 78.0f);
+	Set(rot,  0.0f, 0.0f, 1.0f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+
+	// Right Border
+	prop = g_puzzles.CreateNewProp("wall45");
+	SET_POSITION(50.0f, 2.5f, 46.0f);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(54.0f, 2.5f, 46.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(60.0f, 2.5f, 46.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(66.0f, 2.5f, 46.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(72.0f, 2.5f, 46.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(78.0f, 2.5f, 46.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall45");
+	SET_POSITION(82.0f, 2.5f, 46.0f);
+	Set(rot,  0.707f, 0.0f, -0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+
+	// Vertical Walls
+
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(54.0f, 2.5f, 71.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(60.0f, 2.5f, 71.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(66.0f, 2.5f, 71.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(72.0f, 2.5f, 71.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(78.0f, 2.5f, 71.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(54.0f, 2.5f, 65.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(60.0f, 2.5f, 65.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(66.0f, 2.5f, 65.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(72.0f, 2.5f, 65.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(78.0f, 2.5f, 65.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(54.0f, 2.5f, 59.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddNonCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(60.0f, 2.5f, 59.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(66.0f, 2.5f, 59.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(72.0f, 2.5f, 59.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(78.0f, 2.5f, 59.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(54.0f, 2.5f, 53.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(60.0f, 2.5f, 53.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(66.0f, 2.5f, 53.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	prop = g_puzzles.CreateNewProp("wall3");
+	SET_POSITION(72.0f, 2.5f, 53.0f);
+	Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	prop->SetRotation(rot);
+	world->AddCollidable(prop);
+	//prop = g_puzzles.CreateNewProp("wall3");
+	//SET_POSITION(78.0f, 2.5f, 53.0f);
+	//Set(rot,  0.707f, 0.0f, 0.707f,  0.0f);
+	//prop->SetRotation(rot);
+	//world->AddCollidable(prop);
+
+	// End of props for Red-Key Maze
+}
